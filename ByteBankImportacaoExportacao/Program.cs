@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO; // IO - Input e Output
+using System.Text;
 
 namespace ByteBankImportacaoExportacao
 {
@@ -25,11 +26,11 @@ namespace ByteBankImportacaoExportacao
 
         static void EscreverBuffer(byte[] buffer)
         {
-            foreach (var meuByte in buffer)
-            {
-                Console.Write(meuByte);
-                Console.Write(" ");
-            }
+            var utf8 = Encoding.Default; // Unicode Transformation Format
+            
+            var texto = utf8.GetString(buffer);
+
+            Console.Write(texto);
         }
     }
 } 
