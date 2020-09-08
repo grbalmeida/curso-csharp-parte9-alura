@@ -8,7 +8,7 @@ namespace ByteBankImportacaoExportacao
     { 
         static void Main(string[] args) 
         {
-            TestaEscrita();
+            LeituraBinaria();
 
             Console.ReadLine();
         }
